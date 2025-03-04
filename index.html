@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BashDB List</title>
+    <link rel="stylesheet" href="css/homepage.css">
+    <script src="scripts/homepage.js" defer></script>
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+<div class = "BashDB List">
+    <div class="header">
+        <div class = "logo"> 
+            <img class="logo-image" src="images/logo.png" alt="logo">
+            <span class="logo-text">BashDB</span>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div id="menu-left">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="anime.html">Anime</a></li>
+                <li><a href="manga.html">Manga</a></li>
+            </ul>
+        </div>
+        <div id="menu-right">
+            <div class="dropdown">
+                <button onclick="dropdownEvent()" class="dropbtn">Search Anime/Manga</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a onclick="selectSearchMedia('Anime')">Anime</a>
+                  <a onclick="selectSearchMedia('Manga')">Manga</a>
+                </div>
+              </div>
+              
+            <form id="search_form" class="search">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Search Anime, Manga..." name="search" id="search" type="text" class="validate">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    <div class = "top-container">
+        <div class = "banner">
+            <div class = "anime-bg-container">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class = "top-header">
+            <h2>Top Anime</h2>
+        </div>
+        <ul id = "anime-list">
+            <li>
+                <div class="series">
+                    <img src=""/>
+                    <span class="series-caption">Anime Title</span>
+                </div>
+            </li>
+        </ul>
+
+    <bdo class = "wrapper-main">
+        <div class = "header-news">
+                <h2>Latest Anime News</h2>
+            </div>
+        <div class = "news">
+
+            <div class="article">
+                <h1 id = "anime-title">
+                    <a href="anime link"> Mobile Suit Gundam: The Witch from Mercury</a>
+                </h1>
+                <div class= "anime-unit">
+                    <img id = "anime-img" src = "images/unit-picture-sample.png" alt= "anime-cover">
+                    <p id = "anime-desc">
+                        A lone girl from the remote planet of Mercury transfers to the Asticassia School of Technology.
+                    </p>
+                    <p>
+                        Posted on Date by <a href="https://myanimelist.net/profile/Aiimee">Author</a>
+                    </p>
+                    <a href="https://myanimelist.net/news/69976885"><p> Read more</p></a>
+                </div>
+            </div>
+
+        </div> 
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime</title>
+    <link rel="stylesheet" href="../css/browse-anime.css">
+    <script src="../scripts/browse-anime.js" defer></script>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+</head>
+<body>
+    <div class="header">
+        <div class = "logo"> 
+            <img class="logo-image" src="../images/logo.png" alt="logo">
+            <span class="logo-text">BashDB</span>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div id="menu-left">
+            <ul class="nav-list">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../anime.html">Anime</a></li>
+                <li><a href="../manga.html">Manga</a></li>
+            </ul>
+        </div>
+        <div id="menu-right">
+            <div class="dropdown">
+                <button onclick="dropdownEvent()" class="dropbtn">Search Anime/Manga</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a onclick="selectSearchMedia('Anime')">Anime</a>
+                  <a onclick="selectSearchMedia('Manga')">Manga</a>
+                </div>
+            </div>
+            <form id="search_form" class="search">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Search Anime, Manga..." name="search" id="search" type="text" class="validate">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">     
+            <div class = "menu">
+                <ul class="menu-list">
+                    <li><a href="../anime.html">All Anime</a></li>
+                    <li><a href="/browse-anime.html">Top Airing</a></li>
+                    <li><a href="/anime/genres.html">Genres</a></li>
+                </ul>
+            </div> 
+        </div>   
+
+    <table id="browse-anime">
+        <tr>
+            <th>Rank</th>
+            <th>Anime</th>
+            <th>Info</th>
+            <th>Score</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><a href = browse-anime-description.html onclick="showBrowseAnimeDescriptionDescription()"><img src = "../images/unit-picture-sample.png" id = "browse-anime1 pic" alt ="Manga pic 1" class = 1></a></td>
+            <td id ="browse-anime1 desc">Witch From Mercury <br> Anime <br> April 2023 <br> 100,000 members</td>
+            <td id ="browse-anime1 score">9.47</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href = browse-anime-description.html onclick="showBrowseAnimeDescriptionDescription()"><img src = "../images/unit-picture-sample.png" id = "browse-anime2 pic" alt ="Manga pic 2" class = 1></a></td>
+            <td id = "browse-anime2 desc">Witch From Mercury <br> Manga <br> April 2023 <br> 100,000 members</td>
+            <td id = "browse-anime2 score">9.47</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><a href = browse-anime-description.html onclick="showBrowseAnimeDescriptionDescription()"><img src = "../images/unit-picture-sample.png" id = "browse-anime3 pic" alt ="Manga pic 3" class = 1></a></td>
+            <td id ="browse-anime3 desc">Witch From Mercury <br> Manga <br> April 2023 <br> 100,000 members</td>
+            <td id ="browse-anime3 score">9.47</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><a href = browse-anime-description.html onclick="showBrowseAnimeDescriptionDescription()"><img src = "../images/unit-picture-sample.png" id = "browse-anime4 pic" alt ="Manga pic 4" class = 1></a></td>
+            <td id = "browse-anime4 desc">Witch From Mercury <br> Manga <br> April 2023 <br> 100,000 members</td>
+            <td id = "browse-anime4 score">9.47</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><a href = browse-anime-description.html onclick="showBrowseAnimeDescriptionDescription()"><img src = "../images/unit-picture-sample.png" id = "browse-anime5 pic" alt ="Manga pic 5" class = 1></a></td>
+            <td id ="browse-anime5 desc">Witch From Mercury <br> Manga <br> April 2023 <br> 100,000 members</td>
+            <td id ="browse-anime5 score">9.47</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><a href = browse-anime-description.html onclick="showBrowseAnimeDescriptionDescription()"><img src = "../images/unit-picture-sample.png" id = "browse-anime6 pic" alt ="Manga pic 6" class = 1></a></td>
+            <td id = "browse-anime6 desc">Witch From Mercury <br> Manga <br> April 2023 <br> 100,000 members</td>
+            <td id = "browse-anime6 score">9.47</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><a href = browse-anime-description.html onclick="showBrowseAnimeDescriptionDescription()"><img src = "../images/unit-picture-sample.png" id = "browse-anime7 pic" alt ="Manga pic 7" class = 1></a></td>
+            <td id ="browse-anime7 desc">Witch From Mercury <br> Manga <br> April 2023 <br> 100,000 members</td>
+            <td id ="browse-anime7 score">9.47</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td><a href = browse-anime-description.html onclick="showBrowseAnimeDescriptionDescription()"><img src = "../images/unit-picture-sample.png" id = "browse-anime8 pic" alt ="Manga pic 8" class = 1></a></td>
+            <td id = "browse-anime8 desc">Witch From Mercury <br> Manga <br> April 2023 <br> 100,000 members</td>
+            <td id = "browse-anime8 score">9.47</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td><a href = browse-anime-description.html onclick="showBrowseAnimeDescriptionDescription()"><img src = "../images/unit-picture-sample.png" id = "browse-anime9 pic" alt ="Manga pic 9" class = 1></a></td>
+            <td id ="browse-anime9 desc">Witch From Mercury <br> Manga <br> April 2023 <br> 100,000 members</td>
+            <td id ="browse-anime9 score">9.47</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td><a href = browse-anime-description.html onclick="showBrowseAnimeDescriptionDescription()"><img src = "../images/unit-picture-sample.png" id = "browse-anime10 pic" alt ="Manga pic 10" class = 1></a></td>
+            <td id = "browse-anime10 desc">Witch From Mercury <br> Manga <br> April 2023 <br> 100,000 members</td>
+            <td id = "browse-anime10 score">9.47</td>
+        </tr>
+    </table>
+    
+
+</body>
+</html>

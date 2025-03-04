@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime</title>
+    <link rel="stylesheet" href="../css/anime-info.css">
+    <link rel="icon" type="image/png" href="../images/logo.png">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"> 
+            <img class="logo-image" src="../images/logo.png" alt="logo">
+            <span class="logo-text">BashDB</span>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div id="menu-left">
+            <ul class="nav-list">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../anime.html">Anime</a></li>
+                <li><a href="../manga.html">Manga</a></li>
+            </ul>
+        </div>
+        <div id="menu-right">
+            <form id="search_form" class="search">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Search Anime" name="search" id="search" type="text" class="validate">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <button onclick="toggle();" class="watch-button">Watch Trailer</button>
+        <div class="top-banner">Results</div>
+        <div class="anime-details" id="body">
+            <div class="anime-poster">
+                <img src="../images/unit-picture-sample.png" alt="Anime Poster">
+            </div>
+            <div class="anime-info">
+                <h2 class="anime-title">Anime Title</h2>
+                <p class="anime-description">
+                    No anime information found, please try again.
+                </p>
+                <p><strong>Director:</strong> John Doe</p>
+                <p><strong>Release Date:</strong> January 1, 2023</p>
+                <p><strong>Genre:</strong> Action, Fantasy</p>
+                <p><strong>Episodes:</strong> 12</p>
+                <p><strong>IMDb Rating:</strong> 8.5</p>
+                <div class="container-series">
+                    <div class="series-info">
+                        <table class="series-table">
+                            <tr>
+                                <th>Type:</th>
+                                <td>TV</td>
+                            </tr>
+                            <tr>
+                                <th>Status:</th>
+                                <td>Currently Airing</td>
+                            </tr>
+                            <tr>
+                                <th>Premired:</th>
+                                <td>Fall: 2023</td>
+                            </tr>
+                            <tr>
+                                <th>Producers:</th>
+                                <td>TOHO Animation</td>
+                            </tr>
+                            <tr>
+                                <th>Studios:</th>
+                                <td>Wit Studios</td>
+                            </tr>
+                            <tr>
+                                <th>Source:</th>
+                                <td>Manga</td>
+                            </tr>
+                            <tr>
+                                <th>Available At:</th>
+                                <td>Official Site</td>
+                                <td>@spyfamily_anime</td>
+                            </tr>
+                            <tr>
+                                <th>Streaming Platform:</th>
+                                <td>Cruncyroll</td>
+                                <td>Netflix</td>
+                            </tr>
+                            <tr>
+                                <th>Trailer:</th>
+                                <td>Trailer link</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="trailer">
+            <iframe id="player" width="640" height="360" src="https://www.youtube.com/embed/27OZc-ku6is?enablejsapi=1" frameborder="0" allowfullscreen="1"></iframe>
+            <img src="/images/close.png" class="close" onclick="toggle()">
+        </div>
+
+        <div class="character-voice-banner">Character and Voices</div>
+        <div class="character-voice">
+            <table class="character" id="character-list">
+                <tr>
+                    <td>
+                        No character information found.
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="top-banner">Episodes</div>
+        <div>
+            <table class = "episodes" id="episodes-container">
+                <tr>
+                    
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="../scripts/anime-info.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime</title>
+    <link rel="stylesheet" href="css/anime.css">
+    <script src="scripts/anime.js" defer></script>
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+    <div class="header">
+        <div class = "logo"> 
+            <img class="logo-image" src="images/logo.png" alt="logo">
+            <span class="logo-text">BashDB</span>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div id="menu-left">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="anime.html">Anime</a></li>
+                <li><a href="manga.html">Manga</a></li>
+            </ul>
+        </div>
+        <div id="menu-right">
+            <div class="dropdown">
+                <button onclick="dropdownEvent()" class="dropbtn">Search Anime/Manga</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a onclick="selectSearchMedia('Anime')">Anime</a>
+                  <a onclick="selectSearchMedia('Manga')">Manga</a>
+                </div>
+              </div>
+            <form id="search_form" class="search">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Search Anime" name="search" id="search" type="text" class="validate">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nav>
+    
+    <div class="container">  
+        <div class = "search-menu">
+    
+            <!-- Search bar with search and clear buttons -->
+            <div class="search-container">
+                <input class="search-input" type="text" placeholder="Search...">
+                <button onclick="searchFilteredAnime()" id="search-button-click">Search</button>
+                <button onclick="resetAnimeFilters()" class="clear-button-click">Clear</button>
+            </div>
+        
+            <!-- Buttons with a dropdown -->
+            <div class="button-group">
+                <div class="dropdown">
+                    <button class="button">Type</button>
+                    <div class="dropdown-content">
+                        <select id="type-tv">
+                            <option value="">--Select an Option--</option>
+                            <option value="tv">TV</option>
+                            <option value="movie">Movie</option>
+                            <option value="ova">Ova</option>
+                            <option value="special">Special</option>
+                            <option value="ona">Ona</option>
+                            <option value="music">Music</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="button">Rating</button>
+                    <div class="dropdown-content">
+                        <select id="rating">
+                            <option value="">--Select an Option--</option>
+                            <option value="g">G - All Ages</option>
+                            <option value="pg">PG - Children</option>
+                            <option value="pg13">PG-13 - Teens 13 or older</option>
+                            <option value="r17">R - 17+ (violence & profanity)</option>
+                            <option value="r+">R+ - Mild Nudity</option>
+                            <option value="rx">Rx - Hentai</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="button">Genres</button>
+                    <div class="dropdown-content">
+                        <select id="genre">
+                            <option value="">--Select an Option--</option>
+                            <option value="1">Action</option>
+                            <option value="2">Adventure</option>
+                            <option value="5">Avant Garde</option>
+                            <option value="4">Comedy</option>
+                            <option value="8">Drama</option>
+                            <option value="10">Fantasy</option>
+                            <option value="47">Gourmet</option>
+                            <option value="14">Horror</option>
+                            <option value="7">Mystery</option>
+                            <option value="22">Romance</option>
+                            <option value="24">Sci-Fi</option>
+                            <option value="36">Slice of Life</option>
+                            <option value="30">Sports</option>
+                            <option value="37">Supernatural</option>
+                            <option value="41">Suspense</option>
+                            <option value="9">Ecchi</option>
+                            <option value="49">Erotica</option>
+                            <option value="12">Hentai</option>
+                            <option value="54">Combat Sports</option>
+                            <option value="39">Detective</option>
+                            <option value="56">Educational</option>
+                            <option value="58">Gore</option>
+                            <option value="35">Harem</option>
+                            <option value="13">Historical</option>
+                            <option value="18">Mecha</option>
+                            <option value="67">Medical</option>
+                            <option value="38">Military</option>
+                            <option value="19">Music</option>
+                            <option value="6">Mythology</option>
+                            <option value="71">Pets</option>
+                            <option value="40">Psychological</option>
+                            <option value="3">Racing</option>
+                            <option value="21">Samurai</option>
+                            <option value="23">School</option>
+                            <option value="76">Survival</option>
+                            <option value="79">Video Game</option>
+                            <option value="15">Kids</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="button">Order by</button>
+                    <div class="dropdown-content">
+                        <select id="order-by">
+                            <option value="">--Select an Option--</option>
+                            <option value="title">Title</option>
+                            <option value="mal_id">MAL ID</option>
+                            <option value="start_date">Start Date</option>
+                            <option value="end_date">End Date</option>
+                            <option value="episodes">Episodes</option>
+                            <option value="score">Score</option>
+                            <option value="scored_by">Scored By</option>
+                            <option value="rank">Rank</option>
+                            <option value="popularity">Popularity</option>
+                            <option value="members">Members</option>
+                            <option value="favorites">Favorites</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="button">Sort</button>
+                    <div class="dropdown-content">
+                        <select id="sort">
+                            <option value="">--Select an Option--</option>
+                            <option value="asc">Ascending</option>
+                            <option value="desc">Descending</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="button">Status</button>
+                    <div class="dropdown-content">
+                        <select id="airing-status">
+                            <option value="">--Select an Option--</option>
+                            <option value="complete">Complete</option>
+                            <option value="airing">Airing</option>
+                            <option value="upcoming">Upcoming</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="date-container">
+                <label for="start-date"> Start Date  &nbsp</label>
+                <input class="date-input" type="date" id="start-date" placeholder="Start Date">
+                
+                <label for="end-date"> End Date  &nbsp</label>
+                <input class="date-input" type="date" id="end-date" placeholder="End Date">
+                
+                <input type = "checkbox" checked="checked" id = "checkbox-id">
+                <label for="checkbox-id">  &nbsp SFW </label>
+                </div>
+        
+
+            <div class = "menu">
+                <ul class="menu-list">
+                    <li><a href="">All Anime</a></li>
+                    <li><a href="/anime/browse-anime.html">Top Airing</a></li>
+                    <li><a href="/anime/genres.html">Genres</a></li>
+                </ul>
+            </div> 
+        </div>
+        
+        <div id="anime">
+            Error fetching anime. Please try again.
+        </div>
+    </div>  
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime</title>
+    <link rel="stylesheet" href="css/search-results.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <script src="scripts/search-results.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <div class = "logo"> 
+            <img class="logo-image" src="images/logo.png" alt="logo">
+            <span class="logo-text">BashDB</span>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div id="menu-left">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="anime.html">Anime</a></li>
+                <li><a href="manga.html">Manga</a></li>
+            </ul>
+        </div>
+        <div id="menu-right">
+
+            <div class="dropdown">
+                <button onclick="dropdownEvent()" class="dropbtn">Search Anime/Manga</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a onclick="selectSearchMedia('Anime')">Anime</a>
+                  <a onclick="selectSearchMedia('Manga')">Manga</a>
+                </div>
+              </div>
+              
+            <form id="search_form" class="search">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Search Anime" name="search" id="search" type="text" class="validate">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nav>
+    
+    <div class="container">  
+        <div>
+            <h1 id="search-results-h1">
+                Search results for:
+            </h1>
+        </div>
+        <div id="body">
+            <div class="manga-item">
+                <a href="anime/anime-info.html"><img src="https://cdn.myanimelist.net/images/anime/1314/108941.jpg" alt="Neon Genesis Evangelion" class="manga-image"></a>
+                <a href="anime/anime-info.html"><h3>Neon Genesis Evangelion (Offline)</h3></a>
+                <p>Fifteen years after a cataclysmic event known as the Second Impact, the world faces a new threat: monstrous celestial beings called "Angels" invade Tokyo-3 one by one. Mankind is unable to defend themselves against the Angels despite utilizing their most advanced munitions and military tactics. The only hope for human...</p>
+            </div>
+        </div>
+    </div>   
+</body>
+</html>
+
+
+
